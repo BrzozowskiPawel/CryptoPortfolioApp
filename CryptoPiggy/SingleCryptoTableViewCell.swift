@@ -10,7 +10,7 @@ import UIKit
 struct SingleCryptoTableViewCellModel {
     let name: String
     let symbol: String
-    let price: String
+    let price: Float
 }
 class SingleCryptoTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
@@ -30,7 +30,7 @@ class SingleCryptoTableViewCell: UITableViewCell {
     
     func configure(with viewModel: SingleCryptoTableViewCellModel) {
         nameLabel.text = viewModel.name
-        priceLabel.text = viewModel.price
+        priceLabel.text = String(format: "%.6f", viewModel.price)
         subLabel.text = viewModel.symbol
     }
 

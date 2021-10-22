@@ -16,11 +16,14 @@ class AllCoinsTableViewController: UITableViewController {
         APICaller.shared.getAllCryptoData { [weak self] result in
             switch result {
             case .success(let models):
-            self?.viewModels = models.compactMap({
+                self?.viewModels = models.compactMap({
                 SingleCryptoTableViewCellModel(name: $0.name ?? "N/A",
                                                symbol: $0.asset_id,
-                                               price: "$1")
+                                               price: $0.price_usd ?? 0
+                )
+                                                
             })
+                self?.viewModels = validateData(orginalArray: self!.viewModels)
                 
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
@@ -50,6 +53,7 @@ class AllCoinsTableViewController: UITableViewController {
         return cell
         
     }
+    
     
 
     /*
@@ -95,4 +99,16 @@ class AllCoinsTableViewController: UITableViewController {
     }
     */
 
+}
+
+func validateData( orginalArray: [SingleCryptoTableViewCellModel]) -> [SingleCryptoTableViewCellModel] {
+    var tmpArray = [SingleCryptoTableViewCellModel]()
+    for item in orginalArray {
+        if item.price != nil {
+            if item.price != 0{
+                tmpArray.append(item)
+            }
+        }
+    }
+    return tmpArray
 }
