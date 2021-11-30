@@ -30,5 +30,21 @@ class CoinTableViewCell: UITableViewCell {
         self.coin = coin
         coinNameLabel.text = coin.name!
         coinPriceLabel.text = "\(coin.price_usd!)$"
-    }
+        
+        let imageUrl = "https://cryptoicon-api.vercel.app/api/icon/\(self.coin!.asset_id.lowercased())"
+        let url = URL(string: imageUrl)
+        
+        let session = URLSession.shared
+        
+        let dataTask = session.dataTask(with: url!) { data, response, error in
+            if error == nil && data != nil {
+                    DispatchQueue.main.async {
+                        // Display the image data in the image view
+                        self.coinImage.image =  UIImage(data: data!)
+                    }
+                }
+            }
+
+        dataTask.resume()
+        }
 }
