@@ -11,6 +11,7 @@ class CoinsTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    
     // Creting model for retrieving data and coins array to store retrieved data.
     var model = CryptocoinModel()
     var coins = [Cryptocoin]()
@@ -34,7 +35,9 @@ extension CoinsTableViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CoinCell", for: indexPath) as! CoinTableViewCell
         
+        return cell
     }
     
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		044DFEBE27569DCE0096917E /* CoinsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DFEBD27569DCE0096917E /* CoinsTableViewController.swift */; };
+		044DFEC027569F290096917E /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DFEBF27569F290096917E /* CoinTableViewCell.swift */; };
 		04556BB42722032F00CEAFB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04556BB32722032F00CEAFB0 /* AppDelegate.swift */; };
 		04556BB62722032F00CEAFB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04556BB52722032F00CEAFB0 /* SceneDelegate.swift */; };
 		04556BB82722032F00CEAFB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04556BB72722032F00CEAFB0 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		044DFEBD27569DCE0096917E /* CoinsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsTableViewController.swift; sourceTree = "<group>"; };
+		044DFEBF27569F290096917E /* CoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewCell.swift; sourceTree = "<group>"; };
 		04556BB02722032F00CEAFB0 /* CryptoPiggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoPiggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04556BB32722032F00CEAFB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04556BB52722032F00CEAFB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				04556BC42722033000CEAFB0 /* Info.plist */,
 				04556BBC2722032F00CEAFB0 /* CryptoPiggy.xcdatamodeld */,
 				044DFEBD27569DCE0096917E /* CoinsTableViewController.swift */,
+				044DFEBF27569F290096917E /* CoinTableViewCell.swift */,
 			);
 			path = CryptoPiggy;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				04FA8BD02722E39F009F0E04 /* CryptocoinModel.swift in Sources */,
 				04556BB42722032F00CEAFB0 /* AppDelegate.swift in Sources */,
 				04556BB62722032F00CEAFB0 /* SceneDelegate.swift in Sources */,
+				044DFEC027569F290096917E /* CoinTableViewCell.swift in Sources */,
 				044DFEBE27569DCE0096917E /* CoinsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
