@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044DFEBE27569DCE0096917E /* CoinsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DFEBD27569DCE0096917E /* CoinsTableViewController.swift */; };
 		04556BB42722032F00CEAFB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04556BB32722032F00CEAFB0 /* AppDelegate.swift */; };
 		04556BB62722032F00CEAFB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04556BB52722032F00CEAFB0 /* SceneDelegate.swift */; };
 		04556BB82722032F00CEAFB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04556BB72722032F00CEAFB0 /* ViewController.swift */; };
@@ -14,13 +15,12 @@
 		04556BBE2722032F00CEAFB0 /* CryptoPiggy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04556BBC2722032F00CEAFB0 /* CryptoPiggy.xcdatamodeld */; };
 		04556BC02722033000CEAFB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04556BBF2722033000CEAFB0 /* Assets.xcassets */; };
 		04556BC32722033000CEAFB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04556BC12722033000CEAFB0 /* LaunchScreen.storyboard */; };
-		04556BCB2722084A00CEAFB0 /* AllCoinsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04556BCA2722084A00CEAFB0 /* AllCoinsTableViewController.swift */; };
-		04FA8BCE2722DA22009F0E04 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA8BCD2722DA22009F0E04 /* Crypto.swift */; };
-		04FA8BD02722E39F009F0E04 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA8BCF2722E39F009F0E04 /* APICaller.swift */; };
-		04FA8BD22722E4FD009F0E04 /* SingleCryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA8BD12722E4FD009F0E04 /* SingleCryptoTableViewCell.swift */; };
+		04FA8BCE2722DA22009F0E04 /* Cryptocoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA8BCD2722DA22009F0E04 /* Cryptocoin.swift */; };
+		04FA8BD02722E39F009F0E04 /* CryptocoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA8BCF2722E39F009F0E04 /* CryptocoinModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		044DFEBD27569DCE0096917E /* CoinsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsTableViewController.swift; sourceTree = "<group>"; };
 		04556BB02722032F00CEAFB0 /* CryptoPiggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoPiggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04556BB32722032F00CEAFB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04556BB52722032F00CEAFB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,10 +30,8 @@
 		04556BBF2722033000CEAFB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04556BC22722033000CEAFB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04556BC42722033000CEAFB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04556BCA2722084A00CEAFB0 /* AllCoinsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCoinsTableViewController.swift; sourceTree = "<group>"; };
-		04FA8BCD2722DA22009F0E04 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
-		04FA8BCF2722E39F009F0E04 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
-		04FA8BD12722E4FD009F0E04 /* SingleCryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCryptoTableViewCell.swift; sourceTree = "<group>"; };
+		04FA8BCD2722DA22009F0E04 /* Cryptocoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cryptocoin.swift; sourceTree = "<group>"; };
+		04FA8BCF2722E39F009F0E04 /* CryptocoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocoinModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,15 +67,14 @@
 				04556BB32722032F00CEAFB0 /* AppDelegate.swift */,
 				04556BB52722032F00CEAFB0 /* SceneDelegate.swift */,
 				04556BB72722032F00CEAFB0 /* ViewController.swift */,
-				04556BCA2722084A00CEAFB0 /* AllCoinsTableViewController.swift */,
-				04FA8BCD2722DA22009F0E04 /* Crypto.swift */,
-				04FA8BCF2722E39F009F0E04 /* APICaller.swift */,
+				04FA8BCD2722DA22009F0E04 /* Cryptocoin.swift */,
+				04FA8BCF2722E39F009F0E04 /* CryptocoinModel.swift */,
 				04556BB92722032F00CEAFB0 /* Main.storyboard */,
 				04556BBF2722033000CEAFB0 /* Assets.xcassets */,
 				04556BC12722033000CEAFB0 /* LaunchScreen.storyboard */,
 				04556BC42722033000CEAFB0 /* Info.plist */,
 				04556BBC2722032F00CEAFB0 /* CryptoPiggy.xcdatamodeld */,
-				04FA8BD12722E4FD009F0E04 /* SingleCryptoTableViewCell.swift */,
+				044DFEBD27569DCE0096917E /* CoinsTableViewController.swift */,
 			);
 			path = CryptoPiggy;
 			sourceTree = "<group>";
@@ -153,14 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04FA8BD22722E4FD009F0E04 /* SingleCryptoTableViewCell.swift in Sources */,
-				04FA8BCE2722DA22009F0E04 /* Crypto.swift in Sources */,
+				04FA8BCE2722DA22009F0E04 /* Cryptocoin.swift in Sources */,
 				04556BB82722032F00CEAFB0 /* ViewController.swift in Sources */,
 				04556BBE2722032F00CEAFB0 /* CryptoPiggy.xcdatamodeld in Sources */,
-				04FA8BD02722E39F009F0E04 /* APICaller.swift in Sources */,
+				04FA8BD02722E39F009F0E04 /* CryptocoinModel.swift in Sources */,
 				04556BB42722032F00CEAFB0 /* AppDelegate.swift in Sources */,
 				04556BB62722032F00CEAFB0 /* SceneDelegate.swift in Sources */,
-				04556BCB2722084A00CEAFB0 /* AllCoinsTableViewController.swift in Sources */,
+				044DFEBE27569DCE0096917E /* CoinsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
