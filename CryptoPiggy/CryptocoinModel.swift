@@ -47,6 +47,7 @@ class CryptocoinModel{
                                 tmp_coin_list.append(coin)
                             }
                         }
+                        
                         self.delegate?.coinsRetrieved(tmp_coin_list)
                     }
                 } catch {

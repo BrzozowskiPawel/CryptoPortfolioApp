@@ -115,6 +115,11 @@
                                                 <constraint firstItem="WbT-82-S12" firstAttribute="centerY" secondItem="ERC-58-uvw" secondAttribute="centerY" id="zu5-UF-sMi"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="coinImage" destination="d5U-mf-Egu" id="dUt-D6-t1C"/>
+                                            <outlet property="coinNameLabel" destination="SAL-sd-CUl" id="odY-N9-V9a"/>
+                                            <outlet property="coinPriceLabel" destination="WbT-82-S12" id="qbG-7v-UY6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

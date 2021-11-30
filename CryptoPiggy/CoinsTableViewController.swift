@@ -37,6 +37,9 @@ extension CoinsTableViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CoinCell", for: indexPath) as! CoinTableViewCell
         
+        let coin = coins[indexPath.row]
+        cell.configureCell(coin: coin)
+        
         return cell
     }
     

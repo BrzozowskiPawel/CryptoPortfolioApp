@@ -9,6 +9,12 @@ import UIKit
 
 class CoinTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var coinImage: UIImageView!
+    @IBOutlet weak var coinNameLabel: UILabel!
+    @IBOutlet weak var coinPriceLabel: UILabel!
+    
+    var coin: Cryptocoin?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +26,9 @@ class CoinTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func configureCell(coin: Cryptocoin) {
+        self.coin = coin
+        coinNameLabel.text = coin.name!
+        coinPriceLabel.text = "\(coin.price_usd!)$"
+    }
 }
