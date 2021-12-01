@@ -6,17 +6,19 @@
 //
 
 import UIKit
+import CoreData
 
 class AddCoinViewController: UIViewController {
 
     @IBOutlet weak var coinImage: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
-    
     @IBOutlet weak var amountTextField: UITextField!
     
-    
     var coin: Cryptocoin?
+    
+    // Reference to managed object context
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,7 @@ class AddCoinViewController: UIViewController {
         self.navigationItem.title = "Buy \(coin!.name!)"
     }
     
+    // Dowloading image for specyfic coin
     func getCoinImage() {
         let imageUrl = "https://cryptoicon-api.vercel.app/api/icon/\(self.coin!.asset_id.lowercased())"
         let url = URL(string: imageUrl)
@@ -48,11 +51,23 @@ class AddCoinViewController: UIViewController {
         costLabel.text = String(format: "%.2f", (amount * coin!.price_usd!)) + " $"
     }
     
-    
+    // TODO: Update before saving if there is some data for specyfic coin
     @IBAction func buyButtonTapped(_ sender: Any) {
+        // Crete asset object by creating it in the context
+        let newAsset = Asset(context: self.context)
         
+        // Save properties for new asset object
+        newAsset.name = coin?.name
+        newAsset.quantity = (amountTextField.text! as NSString).doubleValue
         
+        // Save data
+        do {
+            try self.context.save()
+        } catch {
+            print("‼️ ERROR while saving to context")
+        }
     }
     
-
+    
+    
 }
