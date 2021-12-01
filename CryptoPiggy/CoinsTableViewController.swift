@@ -43,6 +43,30 @@ extension CoinsTableViewController: UITableViewDelegate,UITableViewDataSource {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Reference to the row that user have selected (index path)
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        // Chech if it's not nil
+        guard indexPath != nil else {
+            return
+        }
+        
+        // Get coin that have been tapped on
+        let coin = coins[indexPath!.row]
+        
+        // Get a reference to the addCoinViewController
+        let addCoinViewController = segue.destination as! AddCoinViewController
+        
+        // Pass the coin to the addCoinViewController
+        addCoinViewController.coin = coin
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Triggering segue for selected row. Detaisl will be set in prepare function
+        performSegue(withIdentifier: "buyCoin", sender: self)
+    }
+    
     
 }
 extension CoinsTableViewController: CryptoCoinProtocol {
