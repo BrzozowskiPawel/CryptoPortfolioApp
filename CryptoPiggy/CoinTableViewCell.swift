@@ -29,7 +29,7 @@ class CoinTableViewCell: UITableViewCell {
     func configureCell(coin: Cryptocoin) {
         self.coin = coin
         coinNameLabel.text = coin.name!
-        coinPriceLabel.text = "\(coin.price_usd!)$"
+        coinPriceLabel.text = String(format: "%.4f", coin.price_usd!) + " $"
         
         let imageUrl = "https://cryptoicon-api.vercel.app/api/icon/\(self.coin!.asset_id.lowercased())"
         let url = URL(string: imageUrl)

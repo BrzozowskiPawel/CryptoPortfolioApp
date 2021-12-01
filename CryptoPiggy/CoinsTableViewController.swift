@@ -48,7 +48,10 @@ extension CoinsTableViewController: UITableViewDelegate,UITableViewDataSource {
 extension CoinsTableViewController: CryptoCoinProtocol {
     func coinsRetrieved(_ cryptocoins: [Cryptocoin]) {
         // Setting up values for crypto coins array
-        self.coins = cryptocoins
+        let sortecCryptocoins =  cryptocoins.sorted {
+            $0.price_usd! > $1.price_usd!
+        }
+        self.coins = sortecCryptocoins
         
         // Setting up title
         self.navigationItem.title = "\(self.coins.count) coins founded 🔎"
