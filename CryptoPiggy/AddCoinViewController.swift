@@ -26,6 +26,7 @@ class AddCoinViewController: UIViewController {
         getCoinImage()
         priceLabel.text = String(format: "%.6f", coin!.price_usd!) + " $"
         self.navigationItem.title = "Buy \(coin!.name!)"
+        self.amountTextField.placeholder = "Amount of \(coin!.name!)"
     }
     
     // Dowloading image for specyfic coin
@@ -66,6 +67,10 @@ class AddCoinViewController: UIViewController {
         } catch {
             print("‼️ ERROR while saving to context")
         }
+        
+        // Dissmising buy VC
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     

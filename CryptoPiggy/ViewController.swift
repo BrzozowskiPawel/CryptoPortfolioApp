@@ -23,9 +23,6 @@ class ViewController: UIViewController {
         // Setting up tableView
 //        tableView.delegate = self
 //        tableView.dataSource = self
-        
-        // Get all data from Core Data
-        fetchAssets()
     }
 
     override func viewWillAppear(_ animated: Bool) {
