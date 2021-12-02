@@ -15,6 +15,7 @@ class CoinTableViewCell: UITableViewCell {
     
     var coin: Cryptocoin?
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -46,5 +47,5 @@ class CoinTableViewCell: UITableViewCell {
             }
 
         dataTask.resume()
-        }
+    }
 }
