@@ -54,12 +54,15 @@ class AddCoinViewController: UIViewController {
     
     // TODO: Update before saving if there is some data for specyfic coin
     @IBAction func buyButtonTapped(_ sender: Any) {
+        
         // Crete asset object by creating it in the context
         let newAsset = Asset(context: self.context)
         
         // Save properties for new asset object
         newAsset.name = coin?.name
         newAsset.quantity = (amountTextField.text! as NSString).doubleValue
+        
+        
         
         // Save data
         do {

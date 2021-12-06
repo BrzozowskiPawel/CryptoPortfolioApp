@@ -137,6 +137,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="P5j-8n-6of" id="RPb-Ls-NlI"/>
+                        <outlet property="valueLabel" destination="yh7-jE-3pt" id="Rsv-k0-DFG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

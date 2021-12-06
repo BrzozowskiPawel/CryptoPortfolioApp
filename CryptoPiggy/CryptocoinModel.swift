@@ -62,4 +62,5 @@ class CryptocoinModel{
         // Start the data task
         dataTask.resume()
     }
+    
 }
